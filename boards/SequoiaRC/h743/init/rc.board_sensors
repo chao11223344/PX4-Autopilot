@@ -11,9 +11,8 @@ icm42688p -R 0 -b 1 -s start
 # Internal SPI bus ICM-42605
 icm42688p -R 2 -b 4 -s start
 
-
 # Internal baro
-dps310 -I start -a 118
+spl06 -I -a 0x76 start
 
 # External mag
-qmc5883l -X start -a 13
+#qmc5883l -X start -a 13
