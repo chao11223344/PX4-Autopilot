@@ -92,8 +92,6 @@
 #define INTERFACE_USB_CONFIG           "/dev/ttyACM0"
 #define BOARD_VBUS                     MK_GPIO_INPUT(GPIO_OTGFS_VBUS)
 
-//#define USE_VBUS_PULL_DOWN
-
 #define INTERFACE_USART                1
 #define INTERFACE_USART_CONFIG         "/dev/ttyS0,57600"
 #define BOOT_DELAY_ADDRESS             0x000001a0
