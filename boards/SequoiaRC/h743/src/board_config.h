@@ -111,7 +111,9 @@
 /* PWM
  */
 #define DIRECT_PWM_OUTPUT_CHANNELS   12
-#define DIRECT_INPUT_TIMER_CHANNELS  12
+//#define DIRECT_INPUT_TIMER_CHANNELS  12
+
+#define BOARD_NUM_IO_TIMERS 4
 
 #define BOARD_HAS_PWM  DIRECT_PWM_OUTPUT_CHANNELS
 
@@ -143,8 +145,8 @@
 
 
 /* High-resolution timer */
-#define HRT_TIMER               2  /* use timer8 for the HRT */
-#define HRT_TIMER_CHANNEL       1  /* use capture/compare channel 3 */
+#define HRT_TIMER               8  /* use timer8 for the HRT */
+#define HRT_TIMER_CHANNEL       3  /* use capture/compare channel 3 */
 
 
 /* RC Serial port */
@@ -175,9 +177,6 @@
 	}
 
 #define BOARD_ENABLE_CONSOLE_BUFFER
-
-#define BOARD_NUM_IO_TIMERS 4
-
 
 __BEGIN_DECLS
 
