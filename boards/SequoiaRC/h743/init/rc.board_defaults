@@ -2,6 +2,11 @@
 #
 # board specific defaults
 #------------------------------------------------------------------------------
+# Operate without an SD card; mission data is kept in RAM until reboot.
+param set-default SYS_DM_BACKEND 1
+param set-default COM_ARM_SDCARD 0
+param set-default SDLOG_MODE -1
+
 param set-default BAT1_A_PER_V 40
 param set-default BAT1_N_CELLS 4
 param set-default BAT1_V_CHARGED 4.2

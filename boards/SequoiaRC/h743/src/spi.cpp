@@ -37,14 +37,17 @@
 
 
 constexpr px4_spi_bus_t px4_spi_buses[SPI_BUS_MAX_BUS_ITEMS] = {
+	// Alternative IMU types share each slot's CS and DRDY; rc.board_sensors starts only the detected type.
 	initSPIBus(SPI::Bus::SPI1, {
 		initSPIDevice(DRV_IMU_DEVTYPE_ICM42688P, SPI::CS{GPIO::PortA, GPIO::Pin4}, SPI::DRDY{GPIO::PortE, GPIO::Pin15}),
+		initSPIDevice(DRV_IMU_DEVTYPE_ICM42605, SPI::CS{GPIO::PortA, GPIO::Pin4}, SPI::DRDY{GPIO::PortE, GPIO::Pin15}),
 	}),
 	initSPIBus(SPI::Bus::SPI3, {
 		initSPIDevice(DRV_OSD_DEVTYPE_ATXXXX, SPI::CS{GPIO::PortD, GPIO::Pin7}),
 	}),
 	initSPIBus(SPI::Bus::SPI4, {
 		initSPIDevice(DRV_IMU_DEVTYPE_ICM42688P, SPI::CS{GPIO::PortE, GPIO::Pin11}, SPI::DRDY{GPIO::PortE, GPIO::Pin10}),
+		initSPIDevice(DRV_IMU_DEVTYPE_ICM42605, SPI::CS{GPIO::PortE, GPIO::Pin11}, SPI::DRDY{GPIO::PortE, GPIO::Pin10}),
 	}),
 };
 
